@@ -1,0 +1,113 @@
+* {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    .top-header {
+        background-color: #252631;
+
+        .top-header-left {
+            p {
+                color: #fff;
+
+                span {
+                    color: yellow;
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+        .top-header-right {
+            ul {
+
+                li {
+                    &:nth-child(1) {
+                        a {
+                            position: relative;
+
+                            &::before {
+                                content: "|";
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                color: #e7e300;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    a {
+                        padding: 15px;
+                        display: block;
+                        color: white;
+
+                        &:hover {
+                            color: #e7e300;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .bottom-header {
+        background: #3e3f49;
+        clip-path: polygon(47% 0, 100% 0, 100% 60%, 75% 85%, 27% 86%, 0% 60%, 0 0);
+
+        .logo {
+            width: 15%;
+        }
+
+        .nav-menu {
+            width: 50%;
+
+            ul {
+                li {
+                    a {
+                        padding: 25px 20px;
+                        display: block;
+                        font-size: 14px;
+                        color: #fff;
+                        font-weight: 600;
+                        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    }
+                }
+            }
+        }
+
+        .nav-right {
+            .find {
+                position: relative;
+                input {
+                    border-radius: 8mm;
+                    border: none;
+                    padding:8px 14px;
+                    background-color: #252631;
+                    color: white;
+
+                }
+                i{
+                    position: absolute;
+                    right: 20px;
+                    top: 12px;
+                    color: yellow;
+                    padding-left: 4px;
+                    border-left: 2px solid grey;
+                    
+                }
+            }
+        }
+    }
+
+}
